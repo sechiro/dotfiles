@@ -1,0 +1,3 @@
+alias ll='ls -l'
+alias alert_grep='grep -i -e warn -e error -e fail -e fatal'
+PATH=$PATH:/Applications/MacVim.app/Contents/MacOS
