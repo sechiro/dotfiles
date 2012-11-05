@@ -1,11 +1,8 @@
 set columns=120
-set guifont=MS_Gothic:h10:cSHIFTJIS
 nn <c-h> gt
 nn <c-j> gT
 set nu
-"set list listchars=tab:>-,trail:_
 set list
-"set listchars=tab:>-,trail:-,eol:<,extends:>,precedes:<,nbsp:%
 set listchars=tab:>-,trail:-,extends:>,precedes:<,nbsp:%
 set tabstop=8
 set sw=4
