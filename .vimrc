@@ -4,7 +4,7 @@ nn <c-j> gT
 set nu
 set list
 set listchars=tab:>-,trail:-,extends:>,precedes:<,nbsp:%
-set tabstop=8
+set tabstop=4
 set sw=4
 set expandtab
 set clipboard=unnamed
