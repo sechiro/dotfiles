@@ -7,3 +7,8 @@ fi
 
 # User specific aliases and functions
 alias alert_grep='grep -i -e warn -e error -e fail -e fatal'
+#alias ntpsync='sudo service ntpdate restart'
+HISTSIZE=1000000
+
+alias d='pushd'
+alias p='popd'
