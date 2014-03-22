@@ -2,8 +2,14 @@
 set -uex
 script_dir=$(cd $(dirname $0) && pwd)
 
+if [ -r /etc/lsb-release ];then
+    pkg_cmd="apt-get"
+elif [ -r /etc/redhat-release ];then
+    pkg_cmd="yum"
+fi
+
 # vim
-sudo yum -y install git man wget vim-enhanced
+sudo $pkg_cmd -y install git man wget #vim-enhanced
 if [ ! -f ~/.vimrc ];then
     curl -s https://raw.github.com/sechiro/dotfiles/master/.vimrc -o ~/.vimrc
 fi
@@ -14,3 +20,5 @@ if [ ! -e ~/.vim/bundle/neobundle.vim ];then
 fi
 
 cp -r $script_dir/.vim/mysnippets ~/.vim/
+
+echo "Execute: NeoBundleInstall"
