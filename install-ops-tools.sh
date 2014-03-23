@@ -1,12 +1,18 @@
 #!/bin/bash
 if [ -r /etc/lsb-release ];then
     pkg_cmd="apt-get"
+    sudo $pkg_cmd install python-pip
+    # gem ec2ssh dependant
+    sudo $pkg_cmd install autoconf bison build-essential libssl-dev libyaml-dev libreadline6 libreadline6-dev zlib1g zlib1g-dev
 elif [ -r /etc/redhat-release ];then
     pkg_cmd="yum"
+    sudo $pkg_cmd install python-pip
 fi
 
-sudo $pkg_cmd install python-pip
+sudo update-alternatives --set editor /usr/bin/vim.basic
+
 sudo pip install awscli
+
 
 # Install rbenv and Ruby build
 if [ ! -r ~/.rbenv ];then
@@ -24,4 +30,8 @@ fi
 
 # Set 1.9.3-p545
 rbenv global 1.9.3-p545 && echo "Ruby 1.9.3-p545 installed"
+
+# Install ec2ssh
+gem install ec2ssh
+
 
