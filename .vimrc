@@ -49,6 +49,7 @@ NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
+NeoBundle "Shougo/neosnippet-snippets"
 NeoBundle 'jpalardy/vim-slime'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'jnwhiteh/vim-golang'
@@ -134,4 +135,4 @@ let g:neosnippet#snippets_directory='~/.vim/mysnippets'
 " http://qiita.com/esehara@github/items/8662a0db94a7999a52c0
 " python template
 au BufNewFile *.py :0r ~/.vim/mysnippets/utf8.py | :echo "python snippet read."
-au BufNewFile *.sh :0r ~/.vim/mysnippets/sh.snip | :echo "bash snippet read."
+au BufNewFile *.sh :0r ~/.vim/mysnippets/bash.sh | :echo "bash snippet read."

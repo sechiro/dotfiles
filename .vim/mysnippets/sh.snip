@@ -2,3 +2,14 @@ snippet     #!
 abbr        #!/bin/bash ...
 options     head
         #!/bin/bash
+
+
+snippet     #l
+    # defalut log settings
+    log_dir=/tmp
+    stdout_log=$log_dir/$(basename $0 .sh).log
+    stderr_log=$log_dir/$(basename $0 .sh).err
+
+    exec 1> >( tee -a $stdout_log)
+    exec 2> >( tee -a $stderr_log 1>&2)
+
