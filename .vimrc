@@ -133,4 +133,5 @@ let g:neosnippet#snippets_directory='~/.vim/mysnippets'
 
 " http://qiita.com/esehara@github/items/8662a0db94a7999a52c0
 " python template
-au BufNewFile *.py :0r ~/.vim/mysnippets/utf8.py | :echo "snippet read."
+au BufNewFile *.py :0r ~/.vim/mysnippets/utf8.py | :echo "python snippet read."
+au BufNewFile *.sh :0r ~/.vim/mysnippets/sh.snip | :echo "bash snippet read."
