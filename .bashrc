@@ -40,7 +40,9 @@ _replace_by_history() {
   READLINE_LINE="$l"
   READLINE_POINT=${#l}
 }
-bind -x '"\C-r": _replace_by_history'
-bind    '"\C-xr": reverse-search-history'
+if [ ${BASH_VERSINFO[0]} = 4 ];then
+  bind -x '"\C-r": _replace_by_history'
+  bind    '"\C-xr": reverse-search-history'
+fi
 
 
